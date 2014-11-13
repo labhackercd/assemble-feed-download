@@ -31,9 +31,9 @@ var plugin = function(params, callback) {
 
   var grunt = params.grunt;
   var assemble = params.assemble;
-  var download = assemble.options['feed-data'] || {};
+  var download = assemble.options.feeds || {};
 
-  if (grunt.config.get('middleware.feed-data.done') === undefined) {
+  if (grunt.config.get('middleware.feeds.done') === undefined) {
     console.log();
     console.log(bold('  Running:'), '"assemble-contrib-feed-data"');
     console.log(bold('  Stage:  '), '"options:pre:configuration"');
@@ -89,7 +89,7 @@ var plugin = function(params, callback) {
           }
         });
     }, function (err) {
-      grunt.config.set('middleware.feed-data.done', true);
+      grunt.config.set('middleware.feeds.done', true);
       callback();
     });
   } else {

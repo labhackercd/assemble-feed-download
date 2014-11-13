@@ -4,14 +4,14 @@ var expect = require('chai').expect;
 var grunt = require('grunt');
 var plugin = require('../');
 
-describe('assemble-contrib-feed-data', function() {
+describe('assemble-feed-data', function() {
 
   this.timeout(5000);
 
   describe('when given a feed', function() {
 
     before(function() {
-      grunt.config.set('plugin.feed-data.done', undefined);
+      grunt.config.set('plugin.feeds.done', undefined);
     });
 
     it('should collect the feed into a data file', function(done) {
@@ -19,7 +19,7 @@ describe('assemble-contrib-feed-data', function() {
         stage: 'options:pre:configuration',
         assemble: {
           options: {
-            'feed-data': {
+            feeds: {
               dest: 'tests/actual/feeds/',
               feeds: [
                 { url: 'https://github.com/ravishi.atom', //'file://' + __dirname + '/actual/feeds/ravishi.atom',
