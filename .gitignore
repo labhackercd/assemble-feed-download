@@ -47,3 +47,4 @@ dist/
 
 ### Bower ###
 bower_components
+tests/actual
