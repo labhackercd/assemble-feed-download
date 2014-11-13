@@ -4,7 +4,7 @@ var expect = require('chai').expect;
 var grunt = require('grunt');
 var plugin = require('../');
 
-describe('assemble-feed-data', function() {
+describe('assemble-feed-download', function() {
 
   this.timeout(5000);
 

@@ -36,7 +36,7 @@ var plugin = function(params, callback) {
 
   if (grunt.config.get('middleware.feeds.done') === undefined) {
     console.log();
-    console.log(bold('  Running:'), '"assemble-contrib-feed-data"');
+    console.log(bold('  Running:'), '"assemble-feed-download"');
     console.log(bold('  Stage:  '), '"options:pre:configuration"');
     console.log('\nThis may take a moment, feeds are being downloaded...');
     console.log();

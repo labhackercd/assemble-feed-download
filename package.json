@@ -1,5 +1,5 @@
 {
-  "name": "assemble-feed-data",
+  "name": "assemble-feed-download",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/labhackercd/assemble-feed-data.git"
+    "url": "git://github.com/labhackercd/assemble-feed-download.git"
   },
   "author": "Dirley Rodrigues <dirleyrls@gmail.com> (http://romenor.net/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/labhackercd/assemble-feed-data/issues"
+    "url": "https://github.com/labhackercd/assemble-feed-download/issues"
   },
   "dependencies": {
     "feedparser": "~0.19.2",

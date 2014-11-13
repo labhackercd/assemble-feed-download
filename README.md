@@ -1,13 +1,13 @@
-# assemble-feed-data
+# assemble-feed-download
 
-> Assemble plugin for using RSS/Atom feeds as data sources.
+> Assemble plugin for download RSS/Atom feeds from the wild.
 
 ## Quickstart
 
 In the command line, run:
 
 ```bash
-npm install assemble-feed-data --save
+npm install assemble-feed-download --save
 ```
 
 Next, to register the plugin with Assemble in your project's Gruntfile you can
@@ -19,7 +19,7 @@ module's name to the `plugins` option:
 ```js
 assemble: {
   options: {
-    plugins: ['assemble-feed-data', 'other/plugins/*.js']
+    plugins: ['assemble-feed-download', 'other/plugins/*.js']
   }
 }
 ```
@@ -56,7 +56,7 @@ be automatically converted to JSON or YAML based on the extension of their
 ```js
 assemble: {
   options: {
-    plugins: ['assemble-feed-data'],
+    plugins: ['assemble-feed-download'],
     feeds: [
       {url: 'https://github.com/ravishi.atom',
        dest: 'feeds/ravishi.json'}
