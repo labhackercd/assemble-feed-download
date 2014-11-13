@@ -31,7 +31,8 @@ var plugin = function(params, callback) {
 
   var grunt = params.grunt;
   var assemble = params.assemble;
-  var download = assemble.options.feeds || {};
+
+  var feeds = assemble.options.feeds || [];
 
   if (grunt.config.get('middleware.feeds.done') === undefined) {
     console.log();
@@ -40,13 +41,9 @@ var plugin = function(params, callback) {
     console.log('\nThis may take a moment, feeds are being downloaded...');
     console.log();
 
-    download = _.extend({
-      dest: 'tmp/'
-    }, download);
-
-    async.forEach(download.feeds || [], function(feed, next) {
+    async.forEach(feeds, function(feed, next) {
       var req = request(feed.url);
-      var dest = file.slashify(path.join(download.dest, feed.dest));
+      var dest = file.slashify(feed.dest);
 
       var streamError = false;
 

@@ -19,13 +19,10 @@ describe('assemble-feed-data', function() {
         stage: 'options:pre:configuration',
         assemble: {
           options: {
-            feeds: {
-              dest: 'tests/actual/feeds/',
-              feeds: [
-                { url: 'https://github.com/ravishi.atom', //'file://' + __dirname + '/actual/feeds/ravishi.atom',
-                  dest: 'test.json'}
-              ]
-            }
+            feeds: [
+              { url: 'https://github.com/ravishi.atom',
+                dest: 'tests/actual/feeds/test.json'}
+            ]
           }
         },
         grunt: grunt
