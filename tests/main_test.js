@@ -15,28 +15,27 @@ describe('assemble-contrib-feed-data', function() {
     });
 
     it('should collect the feed into a data file', function(done) {
-      var assemble = {
-        config: {
-          'feed-data': {
-            dest: 'tests/actual/feeds/',
-            feeds: [
-              { url: 'https://github.com/ravishi.atom', //'file://' + __dirname + '/actual/feeds/ravishi.atom',
-                dest: 'test.json'}
-            ]
-          },
-          grunt: grunt
-        }
-      };
-
       var params = {
-        event: 'assemble:before:configuration'
+        stage: 'options:pre:configuration',
+        assemble: {
+          options: {
+            'feed-data': {
+              dest: 'tests/actual/feeds/',
+              feeds: [
+                { url: 'https://github.com/ravishi.atom', //'file://' + __dirname + '/actual/feeds/ravishi.atom',
+                  dest: 'test.json'}
+              ]
+            }
+          }
+        },
+        grunt: grunt
       };
 
       function doTheTesting() {
         done();
       }
 
-      plugin(assemble)['assemble-feed-data'](params, doTheTesting);
+      plugin(params, done);
     });
   });
 });
